@@ -15,6 +15,9 @@
   <%= @ad.resource_url %>
 </p>
 
+<p>
+   <%= image_tag @ad.resource_url,:title=> "Photo" %>
+</p>
 
 <%= link_to 'Edit', edit_ad_path(@ad) %> |
 <%= link_to 'Back', ads_path %>
