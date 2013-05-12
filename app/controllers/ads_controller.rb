@@ -1,7 +1,7 @@
 class AdsController < ApplicationController
   # GET /ads
   # GET /ads.json
-  layout "ad_main", :except => :index
+  layout "admain", :except => :index
   def index
     @ads = Ad.all
 
