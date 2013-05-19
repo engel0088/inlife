@@ -13,7 +13,15 @@
     <![endif]-->
 
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <style>
+       body{
+         padding-top: 60px;
+       }
 
+       .sidebar-nav{
+         padding: 9px 0;
+       }
+    </style>
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
     <%= favicon_link_tag 'images/apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
@@ -47,7 +55,7 @@
           <a class="brand" href="#">Inlife</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
+              <li class="active"><%= link_to "Link1", "/path1"  %></li>
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
@@ -56,13 +64,9 @@
       </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-          <div class="span8">
-            <%= bootstrap_flash %>
-            <%= yield %>
-          </div>
-          <div class="span4">
+    <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span2">
             <div class="well sidebar-nav">
               <h3>Sidebar</h3>
               <ul class="nav nav-list">
@@ -73,13 +77,17 @@
               </ul>
             </div><!--/.well -->
           </div><!--/span-->
+
+          <div class="span8">
+            <%= bootstrap_flash %>
+            <%= yield %>
+          </div>
         </div><!--/row-->
 
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
-
     </div> <!-- /container -->
+    <footer>
+      <p>&copy; Engel Lee 2013</p>
+    </footer>
 
     <!-- Javascripts
     ================================================== -->
